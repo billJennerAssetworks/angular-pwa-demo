@@ -1,0 +1,35 @@
+
+<div class="lessons-list-container v-h-center-block-parent" >
+
+
+  <div class="buttons">
+
+      <button class="button button-primary" (click)="subscribeToNotifications()" [disabled]="sub">Subscribe</button>
+
+      <button class="button button-danger" (click)="sendNewsletter()">Send</button>
+
+    </div>
+
+    <div class="buttons">
+
+      <button class="button button-danger" (click)="loadLessons()">Reload Lessons</button>
+
+    </div>
+
+    <h2>All Lessons - V10</h2>
+
+    <table class="table lessons-list card card-strong">
+        <tbody>
+        <tr *ngFor="let lesson of lessons$ | async" [routerLink]="['/lessons', lesson.id]">
+            <td class="lesson-title"> {{lesson.description}} </td>
+            <td class="duration">
+                <i class="md-icon duration-icon">access_time</i>
+                <span>{{lesson.duration}}</span>
+            </td>
+            <!-- <td ><a ng-href="{{lesson.url}}">here</a></td> -->
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
