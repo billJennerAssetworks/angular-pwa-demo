@@ -1,23 +1,22 @@
 
 <div class="lessons-list-container v-h-center-block-parent" >
 
-
+  <br>
+  <p>Notifications : </p>
   <div class="buttons">
+    <button class="button button-primary" (click)="subscribeToNotifications()" [disabled]="sub">Subscribe</button>
+    <button class="button button-danger" (click)="sendNewsletter()">Send</button>
+  </div>
 
-      <button class="button button-primary" (click)="subscribeToNotifications()" [disabled]="sub">Subscribe</button>
-
-      <button class="button button-danger" (click)="sendNewsletter()">Send</button>
-
-    </div>
-
+    <br>
+    <p>Data : </p>
     <div class="buttons">
-
+      <button class="button button-basic" (click)="clearLessons()">Clear Lessons</button>
       <button class="button button-danger" (click)="loadLessons()">Reload Lessons</button>
-
     </div>
 
-    <h2>All Lessons - V10</h2>
-
+    <br>
+    <h3>All Lessons</h3>
     <table class="table lessons-list card card-strong">
         <tbody>
         <tr *ngFor="let lesson of lessons$ | async" [routerLink]="['/lessons', lesson.id]">

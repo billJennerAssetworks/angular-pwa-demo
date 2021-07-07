@@ -11,14 +11,6 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {environment} from '../environments/environment.prod';
 import {ServiceWorkerModule} from '@angular/service-worker';
 
-
-
-
-
-
-
-
-
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoutingModule} from "./app-routing.module";
 import {NewsletterService} from "./services/newsletter.service";

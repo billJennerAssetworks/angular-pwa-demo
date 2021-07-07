@@ -31,6 +31,9 @@ export class LessonsComponent implements OnInit {
         this.loadLessons();
     }
 
+  clearLessons() {
+      this.lessons$ = of([]);
+  }
 
     loadLessons() {
         this.lessons$ = this.lessonsService.loadAllLessons().pipe(catchError(err => of([])));
